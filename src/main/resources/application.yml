@@ -1,0 +1,31 @@
+spring:
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+      username: ${ELASTICSEARCH_USERNAME}
+      password: ${ELASTICSEARCH_PASSWORD}
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: my-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+
+java-mail:
+  email-from-send: @gmail.com
+
+mail:
+  host: smtp.gmail.com
+  port: 587
+  username: email@gmail.com
+  password: password
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+
+
+
